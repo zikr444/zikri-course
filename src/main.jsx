@@ -1,9 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import { createRoot } from "react-dom/client" // Perhatikan perubahan ini.
 import App from "./App.jsx"
 import ScrollToTop from "./components/ScrollToTop.jsx"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "./dist/css/main.css"
+import "./dist/zikri-course/css/main.css"
 
 import "animate.css"
 import AOS from "aos"
@@ -12,11 +13,17 @@ import { BrowserRouter } from "react-router-dom"
 
 AOS.init()
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-)
+const root = document.getElementById("root")
+
+if (root) {
+  const rootElement = createRoot(root)
+
+  rootElement.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  )
+}
