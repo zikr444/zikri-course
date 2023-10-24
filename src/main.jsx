@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client" // Perhatikan perubahan ini.
 import App from "./App.jsx"
 import ScrollToTop from "./components/ScrollToTop.jsx"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "./dist/zikri-course/css/main.css"
+import "./dis/zikri-course/css/main.css"
 
 import "animate.css"
 import AOS from "aos"
